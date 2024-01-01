@@ -1,7 +1,9 @@
-<script setup></script>
+<script setup>
+    import WelcomeSection from "@/components/Landing/WelcomeSection.vue"
+</script>
 
 <template>
-    <main>
-        <h1>Hola mundo</h1>
-    </main>
+    <div>
+        <WelcomeSection />
+    </div>
 </template>

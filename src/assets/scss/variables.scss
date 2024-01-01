@@ -1,0 +1,25 @@
+// Colors
+$creamy: #f3dad2;
+$blueberry: #2f53b6;
+$deepslate: #091e24;
+$bulbasaur: #07c98b;
+
+// Breakpoints
+$tablet: 721px;
+$laptop: 921px;
+
+// Mixins
+@mixin screnHeight() {
+    min-height: 100vh;
+}
+
+// Animations
+@keyframes rotate {
+    0% {
+        transform: rotate(0);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
