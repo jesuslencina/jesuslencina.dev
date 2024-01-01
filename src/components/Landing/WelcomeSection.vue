@@ -1,17 +1,26 @@
 <template>
     <main>
-        <div class="cog"></div>
-        <h1>Jesús Lencina</h1>
-        <h3>Fullstack developer & UI specialist</h3>
-        <div class="bottom-triangles" />
+        <div class="start cog-container">
+            <div class="cog" />
+        </div>
+        <div class="end">
+            <h1>Jesús Lencina</h1>
+            <h3>Fullstack developer & UI specialist</h3>
+            <div class="bottom-triangles" />
+        </div>
     </main>
 </template>
 
 <style scoped lang="scss">
+    .cog-container {
+        justify-self: flex-start;
+        position: relative;
+        height: 20%;
+    }
     .cog {
         position: absolute;
-        top: -24vh;
-        left: -24vh;
+        top: calc((-25.5rem / 2));
+        left: calc((-25.5rem / 2));
         background-image: url("/src/assets/graphics/cog.svg");
         background-size: cover;
         width: 25rem;
@@ -23,7 +32,7 @@
         height: calc(100vh - 3rem);
         display: flex;
         flex-direction: column;
-        justify-content: flex-end;
+        justify-content: space-between;
     }
 
     h1 {
@@ -51,8 +60,8 @@
 
     @media screen and (min-width: $laptop) {
         .cog {
-            top: -36vh;
-            left: -36vh;
+            top: calc((-29.5rem / 2));
+            left: calc((-29.5rem / 2));
             width: 30rem;
             height: 30rem;
         }
