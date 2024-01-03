@@ -48,21 +48,28 @@
 
             padding-top: unset;
             padding-inline: 6rem;
+        }
 
-            img {
-                padding-top: 5vh;
-                align-self: flex-end;
-                justify-self: center;
-                width: 30vw;
-            }
+        img {
+            padding-top: 5vh;
+            align-self: flex-end;
+            justify-self: center;
+            width: 30vw;
+        }
 
-            h2 {
-                font-size: 6rem;
-            }
+        h2 {
+            font-size: 6rem;
+        }
 
-            p {
-                font-size: 1.25rem;
-            }
+        p {
+            font-size: 1.25rem;
+        }
+    }
+
+    @media screen and (orientation: landscape) and (min-width: $large) {
+        img {
+            padding-top: 8vh;
+            width: 24vw;
         }
     }
 </style>
