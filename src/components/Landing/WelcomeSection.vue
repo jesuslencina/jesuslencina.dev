@@ -19,8 +19,8 @@
     }
     .cog {
         position: absolute;
-        top: calc((-25.5rem / 2));
-        left: calc((-25.5rem / 2));
+        top: -12.75rem;
+        left: -12.75rem;
         background-image: url("/src/assets/graphics/cog.svg");
         background-size: cover;
         width: 25rem;
@@ -60,8 +60,8 @@
 
     @media screen and (min-width: $laptop) {
         .cog {
-            top: calc((-29.5rem / 2));
-            left: calc((-29.5rem / 2));
+            top: -14.75rem;
+            left: -14.75rem;
             width: 30rem;
             height: 30rem;
         }
