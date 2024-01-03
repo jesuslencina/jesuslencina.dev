@@ -1,8 +1,13 @@
+<script setup>
+    import ShortcutsList from "./ShortcutsList.vue"
+</script>
+
 <template>
     <main>
         <div class="start cog-container">
             <div class="cog" />
         </div>
+        <ShortcutsList :excludedItems="['home']" customClassname="welcome-screen" />
         <div class="end">
             <h1>Jesús Lencina</h1>
             <h3>Fullstack developer & UI specialist</h3>
@@ -60,10 +65,10 @@
 
     @media screen and (min-width: $laptop) {
         .cog {
-            top: -14.75rem;
-            left: -14.75rem;
-            width: 30rem;
-            height: 30rem;
+            top: -13.75rem;
+            left: -13.75rem;
+            width: 29rem;
+            height: 29rem;
         }
 
         main {
