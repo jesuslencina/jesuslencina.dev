@@ -50,8 +50,11 @@
         flex-direction: column;
         gap: 1.25rem;
 
+        font-size: 1.15rem;
+
         &.welcome-screen {
-            position: fixed;
+            position: absolute;
+            z-index: 1;
             top: 2vh;
             right: 1rem;
         }
@@ -59,10 +62,6 @@
 
     img {
         width: 2rem;
-
-        path {
-            fill: $deepslate;
-        }
     }
 
     a {
