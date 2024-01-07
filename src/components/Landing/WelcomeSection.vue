@@ -3,7 +3,7 @@
 </script>
 
 <template>
-    <main>
+    <main id="start">
         <div class="start cog-container">
             <div class="cog" />
         </div>
@@ -58,7 +58,7 @@
     }
 
     .bottom-triangles {
-        background-image: url("/src/assets/graphics/triangles.svg");
+        background-image: url("/src/assets/graphics/triangles-blueberry.svg");
         width: 100%;
         height: 3rem;
     }

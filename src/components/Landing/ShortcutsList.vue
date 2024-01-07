@@ -70,7 +70,7 @@
         text-align: end;
         gap: 0.75rem;
         color: $deepslate;
-        mix-blend-mode: difference;
+        user-select: none;
 
         &:hover,
         &:active {

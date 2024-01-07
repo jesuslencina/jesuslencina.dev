@@ -11,9 +11,21 @@
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+
+    scroll-behavior: smooth;
+
+    scrollbar-width: none;
+    &::-webkit-scrollbar {
+        display: none;
+    }
 }
 
 // General styles
+
+*::selection {
+    background: green;
+}
+
 h1,
 h2 {
     font-family: "Rubik", Arial, Helvetica, sans-serif;
@@ -33,7 +45,10 @@ a {
     text-decoration: none;
 
     &:hover {
-        filter: brightness(3);
         text-decoration: underline;
     }
+}
+
+img {
+    -webkit-user-drag: none;
 }

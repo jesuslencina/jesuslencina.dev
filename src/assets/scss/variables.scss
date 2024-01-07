@@ -1,6 +1,7 @@
 // Colors
 $creamy: #f3dad2;
 $blueberry: #2f53b6;
+$blueberry-weak: #445faa;
 $deepslate: #091e24;
 $bulbasaur: #07c98b;
 $bulbasaur-intense: #06e49d;
@@ -12,7 +13,7 @@ $laptop: 921px;
 $large: 1401px;
 
 // Mixins
-@mixin screnHeight() {
+@mixin screenHeight() {
     min-height: 100vh;
 }
 
@@ -24,5 +25,15 @@ $large: 1401px;
 
     100% {
         transform: rotate(360deg);
+    }
+}
+
+@keyframes appear {
+    0% {
+        transform: scale(0);
+    }
+
+    100% {
+        transform: scale(1);
     }
 }
