@@ -26,7 +26,7 @@
         position: absolute;
         top: -12.75rem;
         left: -12.75rem;
-        background-image: url("/src/assets/graphics/cog.svg");
+        background-image: url("/src/assets/graphics/cog-blueberry.svg");
         background-size: cover;
         width: 25rem;
         height: 25rem;
