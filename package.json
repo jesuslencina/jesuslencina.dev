@@ -11,6 +11,7 @@
     "format": "prettier --write src/"
   },
   "dependencies": {
+    "@formkit/auto-animate": "^0.8.1",
     "@vercel/analytics": "^1.1.1",
     "css-filter-converter": "^1.0.109",
     "firebase": "^10.7.1",

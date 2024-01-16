@@ -1,5 +1,5 @@
 :root {
-    font-family: "Roboto Mono", "Courier New", Courier, monospace;
+    font-family: $roboto;
     line-height: 1.5;
     font-weight: 400;
 
@@ -28,7 +28,7 @@
 
 h1,
 h2 {
-    font-family: "Rubik", Arial, Helvetica, sans-serif;
+    font-family: $rubik;
     font-weight: bold;
     margin: 0;
 }

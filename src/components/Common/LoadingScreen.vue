@@ -11,7 +11,7 @@
 
 <template>
     <Transition name="fall-down">
-        <main v-if="show">
+        <main v-if="show" @wheel.prevent @touchmove.prevent @scroll.prevent>
             <div class="center">
                 <div class="cog" />
 
@@ -34,7 +34,7 @@
 
     main {
         transform-origin: bottom;
-        pointer-event: none;
+        pointer-events: none;
         background-color: $blueberry-weak;
         text-align: center;
         display: flex;
@@ -58,6 +58,8 @@
 
     em {
         color: $creamy;
+        margin-top: 1rem;
         font-size: 2rem;
+        font-family: $rubik;
     }
 </style>
