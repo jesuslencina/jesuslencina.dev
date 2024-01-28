@@ -20,6 +20,12 @@
     }
 }
 
+@media (prefers-color-scheme: dark) {
+    :root {
+        background-color: $deepslate;
+    }
+}
+
 // General styles
 
 *::selection {
@@ -51,4 +57,10 @@ a {
 
 img {
     -webkit-user-drag: none;
+}
+
+@media screen and (prefers-color-scheme: dark) {
+    :root {
+        color: $sugar;
+    }
 }

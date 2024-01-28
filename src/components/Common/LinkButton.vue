@@ -5,14 +5,15 @@
             bgColor: String,
             redirectUrl: String,
             iconImgPath: String,
-            buttonText: String
+            buttonText: String,
+            externalTab: Boolean
         }
     }
 </script>
 
 <template>
-    <a :href="redirectUrl" target="_blank" :style="{ backgroundColor: bgColor }" :class="extraClasses">
-        <img :src="iconImgPath" :alt="buttonText" />
+    <a :href="redirectUrl" :target="externalTab && '_blank'" :style="{ backgroundColor: bgColor ?? '#445faa' }" :class="extraClasses">
+        <img v-if="iconImgPath" :src="iconImgPath" :alt="buttonText" />
         <span v-if="buttonText">{{ buttonText }}</span>
     </a>
 </template>
@@ -40,7 +41,8 @@
             filter: brightness(1.75);
         }
 
-        &.icon-only {
+        &.icon-only,
+        &.text-only {
             display: flex;
             border-radius: 99px;
             padding: 0.6rem;

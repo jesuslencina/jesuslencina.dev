@@ -1,10 +1,5 @@
 import { initializeApp } from "firebase/app"
 
-// Importing these variables from the .env will NOT prevent them
-// from ending up accessible anyway from the production build.
-// But it will at least hide them from this git repository.
-// Besides, write access is protected by other means.
-
 const firebaseConfig = {
     apiKey: import.meta.env.VITE_FIREBASE_APIKEY,
     authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,

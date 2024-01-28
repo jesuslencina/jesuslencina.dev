@@ -71,6 +71,12 @@
         }
     }
 
+    @media (prefers-color-scheme: dark) {
+        a {
+            background-color: $blueberry-weak;
+        }
+    }
+
     @media screen and (orientation: landscape) and (min-width: $laptop) {
         .pop-enter-to,
         .pop-leave-to {

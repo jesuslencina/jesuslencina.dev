@@ -27,7 +27,7 @@
                 <img src="/src/assets/graphics/icons/briefcase.svg" alt="Go to Experience section" />
             </a>
         </li>
-        <li>
+        <li v-if="!excludedItems?.includes('showcase')">
             <a href="#showcase">
                 <span>Showcase</span>
                 <img src="/src/assets/graphics/icons/folder.svg" alt="Go to Showcase section" />
@@ -86,6 +86,16 @@
 
         img {
             width: 2.5rem;
+        }
+    }
+
+    @media screen and (prefers-color-scheme: dark) {
+        a {
+            color: $sugar;
+        }
+
+        img {
+            filter: brightness(10);
         }
     }
 </style>

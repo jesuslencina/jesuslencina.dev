@@ -4,10 +4,10 @@
             <div class="text">
                 <h2>About me</h2>
                 <p>
-                    Name's Jesús. I'm a fullstack developer and UI designer from Argentina.<br /><br />
-                    I've been working as a developer on the IT field since 2020 with web technologies, and recently I've started expanding the scope of my
+                    I'm a fullstack developer and UI designer from Argentina.<br /><br />
+                    I've been working as a developer on the IT field since 2020 with web technologies, and I've recently started expanding the scope of my
                     expertise.<br /><br />
-                    Apart from coding, I'm interested in topics like design and photography.
+                    Apart from coding and design, I also enjoy doing photoraphy as a hobby.
                 </p>
             </div>
             <img src="/src/assets/graphics/picture.webp" alt="Picture of Jesus Lencina drinking Mate" width="50%" />
@@ -57,6 +57,12 @@
         height: 3rem;
     }
 
+    @media (prefers-color-scheme: dark) {
+        .bottom-triangles {
+            background-image: url("/src/assets/graphics/triangles-deepslate.svg");
+        }
+    }
+
     @media screen and (orientation: landscape) and (min-width: $laptop) {
         section {
             padding-top: unset;
@@ -66,7 +72,7 @@
             display: grid;
             align-items: center;
             grid-template-columns: 2.5fr 2fr;
-            height: calc(100vh + 3rem);
+            min-height: calc(100vh + 3rem);
             padding-top: unset;
             padding-inline: 6rem;
         }

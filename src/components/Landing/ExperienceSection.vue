@@ -54,7 +54,7 @@
                         :src="item.svg_icon_url"
                         :alt="`Logo of ${item.place_name}`"
                         :style="{ filter: item.accent.color }"
-                        width="100"
+                        width="90"
                         height="auto"
                     />
                     <div class="text">
@@ -76,12 +76,14 @@
                             iconImgPath="/src/assets/graphics/icons/linkedin.svg"
                             :buttonText="`${item.place_name} on Linkedin`"
                             :redirectUrl="item.place_linkedin_url"
+                            externalTab
                         />
                         <LinkButton
                             :bgColor="item.color"
                             iconImgPath="/src/assets/graphics/icons/world.svg"
                             :buttonText="`${item.place_name}'s website`"
                             :redirectUrl="item.place_website_url"
+                            externalTab
                         />
                     </div>
                 </div>
@@ -95,7 +97,7 @@
                 <img
                     class="logo"
                     :src="item.svg_icon_url"
-                    :alt="`Logo of ${item.place_name}`"
+                    :alt="`${item.place_name}'s logo`"
                     :style="{ filter: item.accent.color }"
                     width="100%"
                     height="auto"
@@ -105,12 +107,14 @@
                         bgColor="#0b63bd"
                         iconImgPath="/src/assets/graphics/icons/linkedin.svg"
                         :redirectUrl="item.place_linkedin_url"
+                        externalTab
                         :extraClasses="'icon-only'"
                     />
                     <LinkButton
                         :bgColor="item.color"
                         iconImgPath="/src/assets/graphics/icons/world.svg"
                         :redirectUrl="item.place_website_url"
+                        externalTab
                         :extraClasses="'icon-only'"
                     />
                 </div>
@@ -237,7 +241,7 @@
                 position: relative;
                 background-color: transparent;
                 display: grid;
-                grid-template-columns: 175px 1fr;
+                grid-template-columns: 130px 1fr;
                 gap: 1.5rem;
                 margin-bottom: 5rem;
 

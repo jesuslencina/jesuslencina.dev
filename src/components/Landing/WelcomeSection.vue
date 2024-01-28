@@ -7,7 +7,7 @@
         <div class="start cog-container">
             <div class="cog" />
         </div>
-        <ShortcutsList :excludedItems="['home']" customClassname="welcome-screen" />
+        <ShortcutsList :excludedItems="['home', 'showcase']" customClassname="welcome-screen" />
         <div class="end">
             <h1>Jesús Lencina</h1>
             <h3>Fullstack developer & UI specialist</h3>
