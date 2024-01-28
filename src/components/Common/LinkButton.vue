@@ -50,5 +50,11 @@
                 width: 20px;
             }
         }
+
+        &.big-complete {
+            padding: 0.75rem 1rem;
+            grid-template-columns: 30px 1fr;
+            gap: 0.5rem;
+        }
     }
 </style>

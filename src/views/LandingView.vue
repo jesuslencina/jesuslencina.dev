@@ -4,6 +4,7 @@
     import AboutSection from "@/components/Landing/AboutSection.vue"
     import BackToTop from "@/components/Landing/BackToTop.vue"
     import ExperienceSection from "@/components/Landing/ExperienceSection.vue"
+    import ContactSection from "@/components/Landing/ContactSection.vue"
 
     export default {
         data() {
@@ -23,6 +24,7 @@
             AboutSection,
             BackToTop,
             ExperienceSection,
+            ContactSection,
             LoadingScreen
         }
     }
@@ -35,5 +37,6 @@
         <BackToTop />
         <AboutSection />
         <ExperienceSection :set-loading-complete="setLoadingComplete" />
+        <ContactSection />
     </div>
 </template>
