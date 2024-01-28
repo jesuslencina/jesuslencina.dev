@@ -17,7 +17,7 @@
                 buttonText="in/jesuslencina"
                 redirectUrl="https://www.linkedin.com/in/jesuslencina/"
                 bgColor="#1293e8"
-                iconImgPath="/src/assets/graphics/icons/linkedin.svg"
+                iconImgPath="/icons/linkedin.svg"
                 extraClasses="big-complete"
                 externalTab
             />
@@ -26,7 +26,7 @@
                 buttonText="@jesuslencina"
                 redirectUrl="https://github.com/jesuslencina"
                 bgColor="#344455"
-                iconImgPath="/src/assets/graphics/icons/github.svg"
+                iconImgPath="/icons/github.svg"
                 extraClasses="big-complete"
                 externalTab
             />

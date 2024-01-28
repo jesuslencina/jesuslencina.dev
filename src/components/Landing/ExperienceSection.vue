@@ -73,14 +73,14 @@
                     <div class="socials">
                         <LinkButton
                             bgColor="#0b63bd"
-                            iconImgPath="/src/assets/graphics/icons/linkedin.svg"
+                            iconImgPath="/icons/linkedin.svg"
                             :buttonText="`${item.place_name} on Linkedin`"
                             :redirectUrl="item.place_linkedin_url"
                             externalTab
                         />
                         <LinkButton
                             :bgColor="item.color"
-                            iconImgPath="/src/assets/graphics/icons/world.svg"
+                            iconImgPath="/icons/world.svg"
                             :buttonText="`${item.place_name}'s website`"
                             :redirectUrl="item.place_website_url"
                             externalTab
@@ -90,7 +90,7 @@
 
                 <div @click="item.expanded = !item.expanded" class="expand-button">
                     <span>Read {{ !item.expanded ? "more" : "less" }}</span
-                    ><img width="30" height="auto" src="/src/assets/graphics/icons/caret.svg" alt="" :style="{ filter: item.accent.color }" />
+                    ><img width="30" height="auto" src="/icons/caret.svg" alt="" :style="{ filter: item.accent.color }" />
                 </div>
             </article>
             <article class="desktop" v-for="item of items" :key="item.place_name">
@@ -105,14 +105,14 @@
                 <div class="socials">
                     <LinkButton
                         bgColor="#0b63bd"
-                        iconImgPath="/src/assets/graphics/icons/linkedin.svg"
+                        iconImgPath="/icons/linkedin.svg"
                         :redirectUrl="item.place_linkedin_url"
                         externalTab
                         :extraClasses="'icon-only'"
                     />
                     <LinkButton
                         :bgColor="item.color"
-                        iconImgPath="/src/assets/graphics/icons/world.svg"
+                        iconImgPath="/icons/world.svg"
                         :redirectUrl="item.place_website_url"
                         externalTab
                         :extraClasses="'icon-only'"
@@ -158,6 +158,11 @@
             padding: 1rem;
             transition: all 1s ease-in-out;
             height: auto;
+
+            @media (prefers-color-scheme: dark) {
+                background-color: $creamy;
+                color: $deepslate;
+            }
 
             .main-body {
                 display: grid;
