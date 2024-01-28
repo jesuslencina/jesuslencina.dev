@@ -7,7 +7,7 @@
                     I'm a fullstack developer and UI designer from Argentina.<br /><br />
                     I've been working as a developer on the IT field since 2020 with web technologies, and I've recently started expanding the scope of my
                     expertise.<br /><br />
-                    Apart from coding and design, I also enjoy doing photoraphy as a hobby.
+                    Apart from coding and design, I also enjoy doing photography as a hobby.
                 </p>
             </div>
             <img src="/src/assets/graphics/picture.webp" alt="Picture of Jesus Lencina drinking Mate" width="50%" />
