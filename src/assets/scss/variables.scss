@@ -1,0 +1,62 @@
+// Fonts
+$roboto: "Roboto Mono", "Courier New", Courier, monospace;
+$rubik: "Rubik", Arial, Helvetica, sans-serif;
+
+// Colors
+$creamy: #f3dad2;
+$blueberry: #2f53b6;
+$blueberry-weak: #445faa;
+$deepslate: #091e24;
+$bulbasaur: #07c98b;
+$bulbasaur-intense: #06e49d;
+$sugar: #eff8fb;
+
+// Breakpoints
+$tablet: 721px;
+$laptop: 921px;
+$large: 1401px;
+
+// Mixins
+@mixin screenHeight() {
+    min-height: 100vh;
+}
+
+// Animations
+@keyframes rotate {
+    0% {
+        transform: rotate(0);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes appear {
+    0% {
+        transform: scale(0);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fall-down {
+    0% {
+        transform: scaleY(0);
+    }
+
+    100% {
+        transform: scaleY(1);
+    }
+}

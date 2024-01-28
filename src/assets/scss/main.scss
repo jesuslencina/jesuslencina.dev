@@ -1,0 +1,66 @@
+:root {
+    font-family: $roboto;
+    line-height: 1.5;
+    font-weight: 400;
+
+    color-scheme: light;
+    color: $deepslate;
+    background-color: $creamy;
+
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    scroll-behavior: smooth;
+
+    scrollbar-width: none;
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        background-color: $deepslate;
+    }
+}
+
+// General styles
+
+*::selection {
+    background: green;
+}
+
+h1,
+h2 {
+    font-family: $rubik;
+    font-weight: bold;
+    margin: 0;
+}
+
+body,
+main,
+section {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: $bulbasaur;
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+img {
+    -webkit-user-drag: none;
+}
+
+@media screen and (prefers-color-scheme: dark) {
+    :root {
+        color: $sugar;
+    }
+}
