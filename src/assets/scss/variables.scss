@@ -2,7 +2,7 @@
 $roboto: "Roboto Mono", "Courier New", Courier, monospace;
 $rubik: "Rubik", Arial, Helvetica, sans-serif;
 
-// Colors
+// Color palette
 $creamy: #f3dad2;
 $blueberry: #2f53b6;
 $blueberry-weak: #445faa;
@@ -12,9 +12,9 @@ $bulbasaur-intense: #06e49d;
 $sugar: #eff8fb;
 
 // Breakpoints
-$tablet: 721px;
-$laptop: 921px;
-$large: 1401px;
+$tablet: 720px;
+$laptop: 1020px;
+$large: 1400px;
 
 // Mixins
 @mixin screenHeight() {

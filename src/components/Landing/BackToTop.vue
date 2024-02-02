@@ -77,7 +77,7 @@
         }
     }
 
-    @media screen and (orientation: landscape) and (min-width: $laptop) {
+    @media screen and (min-width: $laptop) {
         .pop-enter-to,
         .pop-leave-to {
             animation-duration: 0.25s;

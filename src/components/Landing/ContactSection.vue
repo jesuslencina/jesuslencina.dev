@@ -65,7 +65,7 @@
         flex-direction: column;
     }
 
-    @media screen and (orientation: landscape) and (min-width: $laptop) {
+    @media screen and (min-width: $laptop) {
         section {
             min-height: 70vh;
             background-image: url(/src/assets/graphics/objects-desktop.webp);
