@@ -10,7 +10,7 @@
 
 <template>
     <section id="contact">
-        <strong> Let's connect and keep in touch :)</strong>
+        <strong> Let's keep in touch :)</strong>
         <p>Feel free to reach me out on any of my platforms</p>
         <div class="button-container">
             <LinkButton
@@ -36,7 +36,8 @@
 
 <style lang="scss" scoped>
     section {
-        min-height: 80vh;
+        position: relative;
+        height: 100vh;
         display: flex;
         flex-direction: column;
         justify-content: center;
