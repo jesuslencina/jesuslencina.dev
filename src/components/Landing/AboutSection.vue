@@ -5,8 +5,7 @@
                 <h2>About me</h2>
                 <p>
                     I'm a fullstack developer and UI designer from Argentina.<br /><br />
-                    I've been working as a developer on the IT field since 2020 with web technologies, and I've recently started expanding the scope of my
-                    expertise.<br /><br />
+                    I've been working on the field since 2020 with web technologies, and I'm looking forward to expanding the scope of my expertise.<br /><br />
                     Apart from coding and design, I also enjoy doing photography as a hobby.
                 </p>
             </div>
@@ -63,6 +62,12 @@
         }
     }
 
+    @media screen and (min-width: $tablet) {
+        img {
+            width: 40vw;
+        }
+    }
+
     @media screen and (orientation: landscape) and (min-width: $laptop) {
         section {
             padding-top: unset;
@@ -92,7 +97,7 @@
         }
     }
 
-    @media screen and (orientation: landscape) and (min-width: $large) {
+    @media screen and (min-width: $large) {
         img {
             width: 75%;
         }
