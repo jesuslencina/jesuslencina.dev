@@ -19,7 +19,6 @@
 
 <template>
     <div>
-        <p>{{ store.loading }}</p>
         <LoadingScreen :show="store.loading" />
         <WelcomeSection />
         <BackToTop />
