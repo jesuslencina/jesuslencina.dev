@@ -11,14 +11,13 @@
 
 <style scoped lang="scss">
     a {
-        padding: 0.25rem 0.5rem;
-        border-radius: 9px;
-        font-family: $rubik;
+        @include buttonStyles;
+        text-align: center;
+
         display: grid;
         grid-template-columns: 30px 1fr 30px;
         justify-content: center;
         align-items: center;
-        text-align: center;
         color: $sugar;
 
         img {
@@ -29,7 +28,7 @@
 
         &:hover {
             transform: scale(1.1);
-            filter: brightness(1.75);
+            filter: brightness(1.25) saturate(1.25);
         }
 
         &.icon-only,

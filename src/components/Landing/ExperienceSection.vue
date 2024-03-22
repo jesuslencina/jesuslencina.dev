@@ -36,16 +36,16 @@
 
     @media screen and (min-width: $laptop) {
         section {
-            padding-inline: 6rem;
+            padding-inline: 3rem;
         }
 
         .container {
             margin-top: 15vh;
             margin-inline: 4vw;
             margin-bottom: 15vh;
-            display: flex;
-            flex-direction: column;
-            gap: 2rem;
+            flex-flow: row wrap;
+            justify-content: center;
+            gap: 3rem;
         }
 
         h2 {

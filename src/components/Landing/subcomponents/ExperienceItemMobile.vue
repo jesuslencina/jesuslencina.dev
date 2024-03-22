@@ -83,6 +83,8 @@
         }
 
         .expanded-content {
+            margin-inline: 0.5rem;
+
             p {
                 width: 90%;
             }

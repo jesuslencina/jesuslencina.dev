@@ -21,6 +21,12 @@ $large: 1400px;
     min-height: 100vh;
 }
 
+@mixin buttonStyles() {
+    padding: 0.25rem 0.5rem;
+    border-radius: 9px;
+    font-family: $rubik;
+}
+
 // Animations
 @keyframes rotate {
     0% {

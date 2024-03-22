@@ -11,7 +11,7 @@ export const dataStore = defineStore("data", {
     getters: {
         getExperienceItems() {
             if (this.data?.experience_items?.length) {
-                return this.data?.experience_items.sort((item) => item.order)
+                return this.data?.experience_items.sort((item) => item.order).reverse()
             }
         }
     },
