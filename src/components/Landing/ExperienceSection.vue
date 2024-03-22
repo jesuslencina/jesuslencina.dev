@@ -1,52 +1,18 @@
-<script>
-    import { collection, query, getDocs, where } from "firebase/firestore"
-    import { db } from "@/firebase/firestore"
-
+<script setup>
     import ExperienceItemMobile from "./subcomponents/ExperienceItemMobile.vue"
     import ExperienceItemDesktop from "./subcomponents/ExperienceItemDesktop.vue"
 
-    export default {
-        data() {
-            return { items: Array }
-        },
+    import { dataStore } from "@/store/dataStore"
 
-        props: {
-            setLoadingComplete: {
-                type: Function
-            }
-        },
-
-        components: {
-            ExperienceItemMobile,
-            ExperienceItemDesktop
-        },
-
-        async mounted() {
-            this.items = []
-
-            const queryToMake = query(collection(db, "experience"), where("type", "==", "Professional"))
-
-            const querySnapshot = await getDocs(queryToMake)
-            querySnapshot.forEach((doc) => {
-                const item = { ...doc.data(), id: doc.id }
-                console.log(item)
-                this.items.push(item)
-            })
-
-            // Sort by the fixed order from firebase
-            this.items.sort((a, b) => a.order - b.order)
-
-            this.setLoadingComplete("experienceLoading")
-        }
-    }
+    const store = dataStore()
 </script>
 
 <template>
-    <section id="experience">
+    <section id="experience" v-if="store.getExperienceItems?.length">
         <h2>Work experience</h2>
         <div class="container">
-            <ExperienceItemMobile v-for="item of items" :item="item" :key="`mobile-${item.id}`" />
-            <ExperienceItemDesktop v-for="item of items" :item="item" :key="`desktop-${item.id}`" />
+            <ExperienceItemMobile v-for="item of store.getExperienceItems" :item="item" :key="`mobile-${item.order}`" />
+            <ExperienceItemDesktop v-for="item of store.getExperienceItems" :item="item" :key="`desktop-${item.order}`" />
         </div>
     </section>
 </template>

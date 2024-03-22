@@ -1,53 +1,31 @@
-<script>
+<script setup>
+    import { ref } from "vue"
     import LinkButton from "../../Common/LinkButton.vue"
 
-    export default {
-        props: {
-            item: Object
-        },
+    const props = defineProps(["item"])
 
-        data() {
-            return {
-                accent: this.item.color,
-                expanded: false
-            }
-        },
+    const accent = props.item?.color
 
-        components: {
-            LinkButton
-        }
-    }
+    const expanded = ref(false)
 </script>
 
 <template>
     <article>
-        <img class="logo" :src="this.item.svg_icon_url" :alt="`${this.item.place_name}'s logo`" width="100%" height="auto" />
+        <img class="logo" :src="item.svg_icon_url" :alt="`${item.place_name}'s logo`" width="100%" height="auto" />
         <div class="socials">
-            <LinkButton
-                bgColor="#0b63bd"
-                iconImgPath="/icons/linkedin.svg"
-                :redirectUrl="this.item.place_linkedin_url"
-                externalTab
-                :extraClasses="'icon-only'"
-            />
-            <LinkButton
-                :bgColor="this.item.color"
-                iconImgPath="/icons/world.svg"
-                :redirectUrl="this.item.place_website_url"
-                externalTab
-                :extraClasses="'icon-only'"
-            />
+            <LinkButton bgColor="#0b63bd" iconImgPath="/icons/linkedin.svg" :redirectUrl="item.place_linkedin_url" :extraClasses="'icon-only'" />
+            <LinkButton :bgColor="item.color" iconImgPath="/icons/world.svg" :redirectUrl="item.place_website_url" :extraClasses="'icon-only'" />
         </div>
         <div class="text" v-auto-animate>
-            <p class="timeframe">{{ `${this.item.start} - ${this.item.currently_there ? "Present" : this.item.end}` }}</p>
+            <p class="timeframe">{{ `${item.start} - ${item.currently_there ? "Present" : item.end}` }}</p>
 
-            <p class="place">{{ this.item.place_name }}</p>
-            <p class="title">{{ this.item.title }}</p>
+            <p class="place">{{ item.place_name }}</p>
+            <p class="title">{{ item.title }}</p>
             <ul v-if="!expanded">
-                <li>{{ this.item.achievements[0].split(" ").slice(0, 11).join(" ") }}... <span @click="expanded = true" class="read-more">Read More</span></li>
+                <li>{{ item.achievements[0].split(" ").slice(0, 11).join(" ") }}... <span @click="expanded = true" class="read-more">Read More</span></li>
             </ul>
             <ul v-if="expanded">
-                <li v-for="achievement of this.item.achievements" :key="achievement">
+                <li v-for="achievement of item.achievements" :key="achievement">
                     {{ achievement }}
                 </li>
                 <span @click="expanded = false" class="read-more">Read Less</span>

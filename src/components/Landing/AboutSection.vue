@@ -89,7 +89,7 @@
         }
 
         h2 {
-            font-size: 6rem;
+            font-size: 4rem;
         }
 
         p {

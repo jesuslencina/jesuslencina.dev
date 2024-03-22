@@ -1,22 +1,17 @@
-<script>
-    export default {
-        data() {
-            return {
-                appearPixel: window.innerHeight / 2,
-                appear: false
-            }
-        },
+<script setup>
+    import { ref, onMounted } from "vue"
 
-        methods: {
-            handleScroll() {
-                this.appear = window.scrollY > this.appearPixel
-            }
-        },
+    const appear = ref(false)
 
-        mounted() {
-            window.addEventListener("scroll", this.handleScroll, true)
-        }
+    const appearPixel = window.innerHeight / 2
+
+    const handleScroll = () => {
+        appear.value = window.scrollY > appearPixel
     }
+
+    onMounted(() => {
+        window.addEventListener("scroll", handleScroll, true)
+    })
 </script>
 
 <template>

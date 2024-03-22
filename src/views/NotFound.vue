@@ -1,18 +1,12 @@
-<script>
+<script setup>
     import LinkButton from "@/components/Common/LinkButton.vue"
-
-    export default {
-        components: {
-            LinkButton
-        }
-    }
 </script>
 
 <template>
     <main>
         <h1>404</h1>
         <h2>Not found</h2>
-        <LinkButton redirectUrl="/" buttonText="Back to main page" extraClasses="text-only" :externalTab="false" />
+        <LinkButton redirectUrl="/" buttonText="Back to main page" extraClasses="text-only" />
     </main>
 </template>
 

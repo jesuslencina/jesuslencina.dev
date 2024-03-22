@@ -1,15 +1,10 @@
-<script>
-    export default {
-        props: {
-            excludedItems: Array,
-            customClassname: String
-        }
-    }
+<script setup>
+    const props = defineProps(["excludedItems", "customClassname"])
 </script>
 
 <template>
-    <ul :class="customClassname ?? ''">
-        <li v-if="!excludedItems?.includes('home')">
+    <ul :class="props.customClassname ?? ''">
+        <li v-if="!props?.excludedItems?.includes('home')">
             <a href="#home">
                 <span>Home</span>
                 <img src="/src/assets/graphics/icons/house.svg" alt="Go to Home" />
@@ -27,7 +22,7 @@
                 <img src="/src/assets/graphics/icons/briefcase.svg" alt="Go to Experience section" />
             </a>
         </li>
-        <li v-if="!excludedItems?.includes('showcase')">
+        <li v-if="!props?.excludedItems?.includes('showcase')">
             <a href="#showcase">
                 <span>Showcase</span>
                 <img src="/src/assets/graphics/icons/folder.svg" alt="Go to Showcase section" />

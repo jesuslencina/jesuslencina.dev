@@ -1,4 +1,6 @@
-<script>
+<script setup>
+    import { onMounted } from "vue"
+
     import LoadingScreen from "@/components/Common/LoadingScreen.vue"
     import WelcomeSection from "@/components/Landing/WelcomeSection.vue"
     import AboutSection from "@/components/Landing/AboutSection.vue"
@@ -6,37 +8,23 @@
     import ExperienceSection from "@/components/Landing/ExperienceSection.vue"
     import ContactSection from "@/components/Landing/ContactSection.vue"
 
-    export default {
-        data() {
-            return {
-                experienceLoading: true
-            }
-        },
+    import { dataStore } from "@/store/dataStore"
 
-        methods: {
-            setLoadingComplete(loadingState) {
-                this[loadingState] = false
-            }
-        },
+    const store = dataStore()
 
-        components: {
-            WelcomeSection,
-            AboutSection,
-            BackToTop,
-            ExperienceSection,
-            ContactSection,
-            LoadingScreen
-        }
-    }
+    onMounted(() => {
+        store.fetchData()
+    })
 </script>
 
 <template>
     <div>
-        <LoadingScreen :show="experienceLoading" />
+        <p>{{ store.loading }}</p>
+        <LoadingScreen :show="store.loading" />
         <WelcomeSection />
         <BackToTop />
         <AboutSection />
-        <ExperienceSection :set-loading-complete="setLoadingComplete" />
+        <ExperienceSection />
         <ContactSection />
     </div>
 </template>

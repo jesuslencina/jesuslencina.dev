@@ -1,18 +1,9 @@
-<script>
-    export default {
-        props: {
-            extraClasses: String,
-            bgColor: String,
-            redirectUrl: String,
-            iconImgPath: String,
-            buttonText: String,
-            externalTab: Boolean
-        }
-    }
+<script setup>
+    defineProps(["extraClasses", "bgColor", "redirectUrl", "iconImgPath", "buttonText"])
 </script>
 
 <template>
-    <a :href="redirectUrl" :target="externalTab && '_blank'" :style="{ backgroundColor: bgColor ?? '#445faa' }" :class="extraClasses">
+    <a :href="redirectUrl" target="_blank" :style="{ backgroundColor: bgColor ?? '#445faa' }" :class="extraClasses">
         <img v-if="iconImgPath" :src="iconImgPath" :alt="buttonText" />
         <span v-if="buttonText">{{ buttonText }}</span>
     </a>
@@ -55,6 +46,10 @@
             padding: 0.75rem 1rem;
             grid-template-columns: 30px 1fr;
             gap: 0.5rem;
+        }
+
+        &.smaller-font-size {
+            font-size: 0.75rem;
         }
     }
 </style>

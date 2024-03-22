@@ -1,11 +1,5 @@
-<script>
+<script setup>
     import LinkButton from "@/components/Common/LinkButton.vue"
-
-    export default {
-        components: {
-            LinkButton
-        }
-    }
 </script>
 
 <template>
@@ -19,7 +13,6 @@
                 bgColor="#1293e8"
                 iconImgPath="/icons/linkedin.svg"
                 extraClasses="big-complete"
-                externalTab
             />
 
             <LinkButton
@@ -28,7 +21,6 @@
                 bgColor="#344455"
                 iconImgPath="/icons/github.svg"
                 extraClasses="big-complete"
-                externalTab
             />
         </div>
     </section>

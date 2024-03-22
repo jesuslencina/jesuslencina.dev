@@ -1,12 +1,5 @@
-<script>
-    export default {
-        props: {
-            show: {
-                type: Boolean,
-                default: true
-            }
-        }
-    }
+<script setup>
+    defineProps(["show"])
 </script>
 
 <template>

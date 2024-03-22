@@ -1,54 +1,40 @@
-<script>
+<script setup>
+    import { ref } from "vue"
     import LinkButton from "../../Common/LinkButton.vue"
 
-    export default {
-        props: {
-            item: Object
-        },
+    defineProps(["item"])
 
-        data() {
-            return {
-                expanded: false
-            }
-        },
-
-        components: {
-            LinkButton
-        }
-    }
+    const expanded = ref(false)
 </script>
 
 <template>
     <article :class="`${expanded ? 'expanded' : ''}`" v-auto-animate>
         <div class="main-body">
-            <img class="logo" :src="this.item.svg_icon_url" :alt="`Logo of ${this.item.place_name}`" width="90" height="auto" />
+            <img class="logo" :src="item.svg_icon_url" :alt="`Logo of ${item.place_name}`" width="90" height="auto" />
             <div class="text">
-                <p class="timeframe">{{ `${this.item.start} - ${this.item.currently_there ? "Present" : this.item.end}` }}</p>
-                <p class="place" :style="{ color: this.item.color }">{{ this.item.place_name }}</p>
-                <p class="title">{{ this.item.title }}</p>
+                <p class="timeframe">{{ `${item.start} - ${item.currently_there ? "Present" : item.end}` }}</p>
+                <p class="place" :style="{ color: item.color }">{{ item.place_name }}</p>
+                <p class="title">{{ item.title }}</p>
             </div>
         </div>
 
         <div v-if="expanded" class="expanded-content">
-            <ul>
-                <li v-for="achievement of this.item.achievements" :key="achievement">
-                    {{ achievement }}
-                </li>
-            </ul>
+            <p v-for="achievement of item.achievements" :key="achievement">{{ achievement }}</p>
+
             <div class="socials">
                 <LinkButton
                     bgColor="#0b63bd"
                     iconImgPath="/icons/linkedin.svg"
-                    :buttonText="`${this.item.place_name} on Linkedin`"
-                    :redirectUrl="this.item.place_linkedin_url"
-                    externalTab
+                    :buttonText="`${item.place_name} on Linkedin`"
+                    :extraClasses="'smaller-font-size'"
+                    :redirectUrl="item.place_linkedin_url"
                 />
                 <LinkButton
-                    :bgColor="this.item.color"
+                    :bgColor="item.color"
                     iconImgPath="/icons/world.svg"
-                    :buttonText="`${this.item.place_name}'s website`"
-                    :redirectUrl="this.item.place_website_url"
-                    externalTab
+                    :buttonText="`${item.place_name}'s website`"
+                    :extraClasses="'smaller-font-size'"
+                    :redirectUrl="item.place_website_url"
                 />
             </div>
         </div>
@@ -97,15 +83,14 @@
         }
 
         .expanded-content {
-            li {
-                line-height: 1.75;
-                margin: 1rem 0;
+            p {
+                width: 90%;
             }
 
             .socials {
+                margin-top: 1.5rem;
                 display: flex;
                 flex-direction: column;
-                padding-inline: 1rem;
                 gap: 1rem;
             }
         }
